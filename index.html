@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!--
+    PSEUDO-WEBSITE (NON-IDENTIFYING)
+    ------------------------------------------------------------------
+    Replace tokens to rebrand quickly (optional):
+      BRAND_NAME      → e.g., "Your Company" (appears in nav + hero)
+      BRAND_TAGLINE   → short promise, e.g., "Secure. Resilient. Ready."
+      SUPPORT_EMAIL   → e.g., "hello@example.com"
+      WEBSITE_URL     → e.g., "https://example.com"
+      LINKEDIN_URL    → e.g., "https://www.linkedin.com/company/example"
+    This file intentionally avoids locations, specific claims, and stats.
+  -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BRAND_NAME — Cybersecurity & IT Services</title>
+  <meta name="description" content="BRAND_NAME provides pragmatic cybersecurity and IT services for modern teams. We help organizations prepare, defend, and recover with clarity and confidence." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Brand tokens (neutral defaults) */
+    :root {
+      --primary: #1D3FFF;     /* indigo */
+      --accent:  #8EEA3E;     /* lime */
+      --bg:      #0E1218;     /* graphite */
+      --muted:   #7A8898;     /* slate */
+      --card:    rgba(255,255,255,0.05);
+    }
+    body { font-family: 'IBM Plex Sans', 'Inter', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial; background: var(--bg); color: #fff; }
+    h1,h2,h3 { font-family: 'Inter','IBM Plex Sans', system-ui, -apple-system, Segoe UI, Roboto; }
+    .btn-primary { background: var(--primary); color: #fff; box-shadow: 0 10px 30px rgba(29,63,255,.35); }
+    .btn-primary:hover { opacity: .95; }
+    .btn-ghost { border: 1px solid rgba(255,255,255,.1); }
+    .card { background: var(--card); border: 1px solid rgba(255,255,255,.1); }
+    .muted { color: var(--muted); }
+  </style>
+</head>
+<body class="min-h-screen w-full selection:bg-white/10">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-30 backdrop-blur bg-[color:var(--bg)]/70">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
+      <a href="#" class="flex items-center gap-3">
+        <div class="grid place-items-center h-10 w-10 rounded-xl" style="background:var(--primary); box-shadow:0 8px 24px rgba(29,63,255,.35);">LOGO</div>
+        <div class="leading-tight">
+          <div class="text-lg font-semibold tracking-wide">BRAND_NAME</div>
+          <div class="text-xs muted">Cybersecurity & IT</div>
+        </div>
+      </a>
+      <nav class="hidden gap-8 md:flex">
+        <a href="#services" class="muted hover:text-white">Services</a>
+        <a href="#solutions" class="muted hover:text-white">Solutions</a>
+        <a href="#pricing" class="muted hover:text-white">Pricing</a>
+        <a href="#resources" class="muted hover:text-white">Resources</a>
+        <a href="#contact" class="muted hover:text-white">Contact</a>
+      </nav>
+      <div class="flex items-center gap-3">
+        <a href="#contact" class="btn-ghost rounded-xl px-4 py-2 text-sm hover:bg-white/5">Talk to us</a>
+        <a href="#contact" class="btn-primary rounded-xl px-4 py-2 text-sm font-semibold">Get started</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="pointer-events-none absolute inset-0 opacity-40" aria-hidden>
+      <div class="absolute -left-24 -top-40 h-[32rem] w-[32rem] rounded-full blur-3xl" style="background: radial-gradient(closest-side, var(--primary), transparent);"></div>
+      <div class="absolute -right-24 -bottom-40 h-[28rem] w-[28rem] rounded-full blur-3xl" style="background: radial-gradient(closest-side, var(--accent), transparent);"></div>
+    </div>
+    <div class="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-4 py-20 md:grid-cols-2">
+      <div class="space-y-6">
+        <h1 class="text-3xl font-bold leading-tight md:text-5xl">BRAND_TAGLINE</h1>
+        <p class="max-w-xl muted">We help teams reduce risk, strengthen defenses, and build operational resilience. Clear scope. Practical controls. No hype.</p>
+        <div class="flex flex-wrap gap-3">
+          <a href="#contact" class="btn-primary rounded-xl px-5 py-3 font-semibold">Request a consultation</a>
+          <a href="#resources" class="btn-ghost rounded-xl px-5 py-3 font-semibold">Download checklist</a>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="card rounded-2xl p-6">
+          <h3 class="mb-2 text-lg font-semibold">What we deliver</h3>
+          <ul class="space-y-2 text-sm muted">
+            <li class="flex items-start gap-2"><span class="mt-1 inline-block h-1.5 w-1.5 flex-none rounded-full" style="background:var(--primary)"></span> Baseline hardening for identity, endpoints, email, and backups</li>
+            <li class="flex items-start gap-2"><span class="mt-1 inline-block h-1.5 w-1.5 flex-none rounded-full" style="background:var(--primary)"></span> Vulnerability scanning and prioritization with clear remediation</li>
+            <li class="flex items-start gap-2"><span class="mt-1 inline-block h-1.5 w-1.5 flex-none rounded-full" style="background:var(--primary)"></span> Incident readiness with simple playbooks and recovery guidance</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="mx-auto max-w-7xl px-4 py-16">
+    <h2 class="mb-10 text-2xl font-semibold md:text-3xl">Services</h2>
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+      <div class="card rounded-2xl p-6">
+        <h3 class="mb-3 text-lg font-semibold">Security Readiness</h3>
+        <p class="text-sm muted">Foundational controls to prevent common threats. Practical policies and day‑one protections.</p>
+      </div>
+      <div class="card rounded-2xl p-6">
+        <h3 class="mb-3 text-lg font-semibold">Vulnerability Management</h3>
+        <p class="text-sm muted">Routine scans, prioritization, and remediation support. Visibility that drives action.</p>
+      </div>
+      <div class="card rounded-2xl p-6">
+        <h3 class="mb-3 text-lg font-semibold">Advisory & Support</h3>
+        <p class="text-sm muted">Guidance for security and IT operations, tailored to your environment and goals.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Solutions -->
+  <section id="solutions" class="bg-white/5 py-16">
+    <div class="mx-auto max-w-7xl px-4">
+      <h2 class="mb-2 text-2xl font-semibold md:text-3xl">Solution areas</h2>
+      <p class="mb-10 muted">Choose what you need now; expand later. Everything is modular and outcome‑based.</p>
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-4">
+        <div class="card rounded-2xl p-6"><h3 class="mb-2 font-semibold">Identity & Access</h3><p class="text-sm muted">MFA, conditional access, role hygiene.</p></div>
+        <div class="card rounded-2xl p-6"><h3 class="mb-2 font-semibold">Endpoint & Email</h3><p class="text-sm muted">EDR, patching, phishing defenses.</p></div>
+        <div class="card rounded-2xl p-6"><h3 class="mb-2 font-semibold">Backup & Recovery</h3><p class="text-sm muted">Immutable backups, restore drills.</p></div>
+        <div class="card rounded-2xl p-6"><h3 class="mb-2 font-semibold">Awareness & Training</h3><p class="text-sm muted">Campaigns and just‑in‑time coaching.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing (generic, no hard numbers) -->
+  <section id="pricing" class="mx-auto max-w-7xl px-4 py-16">
+    <h2 class="mb-2 text-2xl font-semibold md:text-3xl">Pricing</h2>
+    <p class="mb-10 muted">Transparent, scalable, and tailored. We price outcomes, not tool lists. Request a quote to match your scope.</p>
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+      <div class="card rounded-2xl p-6">
+        <div class="mb-1 text-sm uppercase tracking-wide text-white/70">Starter</div>
+        <div class="mb-4 text-3xl font-bold">Custom</div>
+        <ul class="mb-6 space-y-2 text-sm muted">
+          <li>Baseline hardening</li>
+          <li>Core monitoring</li>
+          <li>Monthly check‑ins</li>
+        </ul>
+        <a href="#contact" class="btn-primary inline-block w-full rounded-xl px-5 py-3 text-center font-semibold">Request quote</a>
+      </div>
+      <div class="rounded-2xl p-6 text-white" style="background:var(--primary); border:1px solid transparent; box-shadow:0 24px 60px rgba(29,63,255,.35)">
+        <div class="mb-1 text-sm uppercase tracking-wide text-white/90">Standard</div>
+        <div class="mb-4 text-3xl font-bold">Tailored</div>
+        <ul class="mb-6 space-y-2 text-sm">
+          <li>Everything in Starter</li>
+          <li>Email security & training</li>
+          <li>Quarterly reviews</li>
+        </ul>
+        <a href="#contact" class="inline-block w-full rounded-xl bg-white px-5 py-3 text-center font-semibold text-[color:var(--bg)]">Request quote</a>
+      </div>
+      <div class="card rounded-2xl p-6">
+        <div class="mb-1 text-sm uppercase tracking-wide text-white/70">Advanced</div>
+        <div class="mb-4 text-3xl font-bold">Scope‑based</div>
+        <ul class="mb-6 space-y-2 text-sm muted">
+          <li>Backup & recovery drills</li>
+          <li>Vendor & policy support</li>
+          <li>Executive reporting</li>
+        </ul>
+        <a href="#contact" class="btn-primary inline-block w-full rounded-xl px-5 py-3 text-center font-semibold">Request quote</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resources CTA -->
+  <section id="resources" class="bg-gradient-to-b from-white/5 to-transparent py-16">
+    <div class="mx-auto max-w-7xl px-4">
+      <div class="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
+        <div>
+          <h2 class="mb-3 text-2xl font-semibold md:text-3xl">Free checklist: Security essentials</h2>
+          <p class="mb-6 muted">A practical, vendor‑neutral list of controls you can start this week. No signup required.</p>
+          <a href="#" class="btn-primary inline-block rounded-xl px-5 py-3 font-semibold">Download PDF</a>
+        </div>
+        <div class="card rounded-2xl p-6 muted">
+          <p class="mb-2 font-mono text-xs uppercase tracking-wide" style="color:var(--muted)">Preview</p>
+          <ul class="space-y-2 text-sm">
+            <li>• MFA & access hygiene</li>
+            <li>• Patch & update rings</li>
+            <li>• Backup scope & tests</li>
+            <li>• Email authentication basics</li>
+            <li>• Asset & admin inventory</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ (neutral) -->
+  <section class="mx-auto max-w-7xl px-4 py-16">
+    <h2 class="mb-6 text-2xl font-semibold md:text-3xl">FAQ</h2>
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+      <div class="card rounded-2xl p-6">
+        <h3 class="mb-2 font-semibold">Do you support small teams?</h3>
+        <p class="text-sm muted">Yes. Our engagements scale from small teams to growing organizations, with scope matched to your goals.</p>
+      </div>
+      <div class="card rounded-2xl p-6">
+        <h3 class="mb-2 font-semibold">Can we start with an assessment?</h3>
+        <p class="text-sm muted">Absolutely. We often begin with a light assessment to define priorities and a realistic roadmap.</p>
+      </div>
+      <div class="card rounded-2xl p-6">
+        <h3 class="mb-2 font-semibold">Which tools do you use?</h3>
+        <p class="text-sm muted">We’re vendor‑agnostic and design to your environment. Our focus is outcomes, not tool lists.</p>
+      </div>
+      <div class="card rounded-2xl p-6">
+        <h3 class="mb-2 font-semibold">How do we get a quote?</h3>
+        <p class="text-sm muted">Share your scope in the form below. We’ll propose an approach and transparent pricing.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="mx-auto max-w-7xl px-4 py-16">
+    <h2 class="mb-6 text-2xl font-semibold md:text-3xl">Contact</h2>
+    <p class="mb-6 muted">Tell us about your environment and goals. We’ll follow up with next steps.</p>
+    <div class="grid grid-cols-1 gap-10 md:grid-cols-2">
+      <form id="contact-form" class="card rounded-2xl p-6">
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <label class="block"><span class="mb-1 block text-sm text-white/80">First name</span><input name="firstName" required class="w-full rounded-xl border border-white/10 bg-[color:var(--bg)] p-3 text-white placeholder-white/40 outline-none focus:ring-2 focus:ring-[color:var(--primary)]" /></label>
+          <label class="block"><span class="mb-1 block text-sm text-white/80">Last name</span><input name="lastName" required class="w-full rounded-xl border border-white/10 bg-[color:var(--bg)] p-3 text-white placeholder-white/40 outline-none focus:ring-2 focus:ring-[color:var(--primary)]" /></label>
+        </div>
+        <label class="block mt-4"><span class="mb-1 block text-sm text-white/80">Work email</span><input type="email" name="email" required class="w-full rounded-xl border border-white/10 bg-[color:var(--bg)] p-3 text-white placeholder-white/40 outline-none focus:ring-2 focus:ring-[color:var(--primary)]" /></label>
+        <label class="block mt-4"><span class="mb-1 block text-sm text-white/80">Company</span><input name="company" class="w-full rounded-xl border border-white/10 bg-[color:var(--bg)] p-3 text-white placeholder-white/40 outline-none focus:ring-2 focus:ring-[color:var(--primary)]" /></label>
+        <label class="block mt-4"><span class="mb-1 block text-sm text-white/80">Message</span><textarea rows="4" name="message" required class="w-full rounded-xl border border-white/10 bg-[color:var(--bg)] p-3 text-white placeholder-white/40 outline-none focus:ring-2 focus:ring-[color:var(--primary)]" placeholder="Briefly describe your goals…"></textarea></label>
+        <button type="submit" class="btn-primary mt-4 w-full rounded-xl px-5 py-3 font-semibold">Send</button>
+        <p class="mt-2 text-center text-xs muted">By submitting, you agree to our privacy policy.</p>
+      </form>
+
+      <div class="space-y-4 text-sm muted">
+        <div><strong>Email:</strong> <a href="mailto:SUPPORT_EMAIL" class="text-[color:var(--accent)]">SUPPORT_EMAIL</a></div>
+        <div><strong>Website:</strong> <a href="WEBSITE_URL" class="text-[color:var(--accent)]" target="_blank" rel="noreferrer">WEBSITE_URL</a></div>
+        <div><strong>LinkedIn:</strong> <a href="LINKEDIN_URL" class="text-[color:var(--accent)]" target="_blank" rel="noreferrer">LINKEDIN_URL</a></div>
+        <div class="card rounded-2xl p-6">
+          <h3 class="mb-2 font-semibold">How we engage</h3>
+          <ol class="list-inside list-decimal space-y-2 text-sm">
+            <li>Intro call to align on goals</li>
+            <li>Light assessment to prioritize</li>
+            <li>Roadmap with clear outcomes</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 py-10">
+    <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 md:flex-row">
+      <div class="flex items-center gap-3">
+        <div class="grid h-9 w-9 place-items-center rounded-lg" style="background:var(--primary);">LOGO</div>
+        <div class="text-sm muted">© <span id="year"></span> BRAND_NAME. All rights reserved.</div>
+      </div>
+      <div class="flex flex-wrap items-center gap-6 text-sm muted">
+        <a href="#" class="hover:text-white">Privacy</a>
+        <a href="#" class="hover:text-white">Terms</a>
+        <a href="#contact" class="hover:text-white">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('contact-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(e.target).entries());
+      console.log('Pseudo contact form:', data);
+      alert('Thanks — we\'ll follow up shortly.');
+      e.target.reset();
+    });
+  </script>
+</body>
+</html>

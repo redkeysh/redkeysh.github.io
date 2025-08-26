@@ -1,22 +1,22 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!-- PSEUDO-WEBSITE (NON-IDENTIFYING) with flat icons and orange palette -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BRAND_NAME — Cybersecurity & IT Services</title>
-  <meta name="description" content="BRAND_NAME provides pragmatic cybersecurity and IT services for modern teams. We help organizations prepare, defend, and recover with clarity and confidence." />
+  <title>Signal 72 — Cybersecurity & IT Services</title>
+  <meta name="description" content="Signal 72 provides pragmatic cybersecurity and IT services for modern teams. We help organizations prepare, defend, and recover with clarity and confidence." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Iconify for Tailwind-compatible icons -->
+  <script src="https://code.iconify.design/iconify-icon/2.0.0/iconify-icon.min.js"></script>
   <style>
-    /* Orange-forward palette (not burnt, not pastel) */
     :root {
       --primary: #FF7A1A;   /* vivid orange */
-      --primary-600: #E96E16; /* darker hover */
-      --accent:  #1EC5A0;   /* cool teal accent for contrast */
+      --primary-600: #E96E16;
+      --accent:  #1EC5A0;   /* teal accent */
       --bg:      #0E1218;   /* graphite */
       --muted:   #8A95A6;   /* slate */
       --card:    rgba(255,255,255,0.05);
@@ -30,7 +30,9 @@
     .card { background: var(--card); border: 1px solid rgba(255,255,255,.1); }
     .muted { color: var(--muted); }
     .badge { background: rgba(255, 122, 26, .12); color: #FFC9A1; border: 1px solid rgba(255, 122, 26, .25); }
-    .icon-flat { width: 20px; height: 20px; display: block; }
+    .icon-box { display:flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:8px; background:var(--primary); color:#0E1218; flex-shrink:0; }
+    .icon-box-sm { width:28px; height:28px; border-radius:8px; background:var(--accent); color:#0E1218; }
+    .kicker { letter-spacing:.08em; text-transform:uppercase; font-size:.75rem; color:#FFC9A1; }
   </style>
 </head>
 <body class="min-h-screen w-full selection:bg-white/10">
@@ -39,9 +41,9 @@
   <header class="sticky top-0 z-30 backdrop-blur bg-[color:var(--bg)]/70">
     <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
       <a href="#" class="flex items-center gap-3">
-        <div class="grid place-items-center h-10 w-10 rounded-xl" style="background:var(--primary); box-shadow:0 8px 24px var(--ring);">LOGO</div>
+        <div class="grid place-items-center h-10 w-10 rounded-xl" style="background:var(--primary); box-shadow:0 8px 24px var(--ring);"><span class="font-bold">S72</span></div>
         <div class="leading-tight">
-          <div class="text-lg font-semibold tracking-wide">BRAND_NAME</div>
+          <div class="text-lg font-semibold tracking-wide">Signal 72</div>
           <div class="text-xs muted">Cybersecurity & IT</div>
         </div>
       </a>
@@ -68,33 +70,24 @@
     <div class="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-4 py-20 md:grid-cols-2">
       <div class="space-y-6">
         <span class="badge inline-block rounded-full px-3 py-1 text-xs font-semibold">New</span>
-        <h1 class="text-3xl font-bold leading-tight md:text-5xl">BRAND_TAGLINE</h1>
+        <h1 class="text-3xl font-bold leading-tight md:text-5xl">Secure. Resilient. Ready.</h1>
         <p class="max-w-xl muted">We help teams reduce risk, strengthen defenses, and build operational resilience. Clear scope. Practical controls. No hype.</p>
         <div class="flex flex-wrap gap-3">
           <a href="#contact" class="btn-primary rounded-xl px-5 py-3 font-semibold">Request a consultation</a>
           <a href="#resources" class="btn-ghost rounded-xl px-5 py-3 font-semibold">Download checklist</a>
         </div>
-        <!-- Icon strip -->
+        <!-- Hero icon strip -->
         <div class="mt-6 grid grid-cols-3 gap-4 md:max-w-md">
           <div class="card rounded-xl p-3 text-center">
-            <div class="<div class="grid h-8 w-8 place-items-center rounded-lg p-1.5 style="background:var(--primary)">
-              <!-- Shield flat icon -->
-              <svg viewBox="0 0 24 24" class="icon-flat" fill="#0E1218"><path d="M12 2 4 5v6c0 5 4 9 8 11 4-2 8-6 8-11V5l-8-3Z"/></svg>
-            </div>
+            <div class="icon-box mx-auto mb-2"><iconify-icon icon="mdi:shield-check"></iconify-icon></div>
             <div class="text-xs">Protect</div>
           </div>
           <div class="card rounded-xl p-3 text-center">
-            <div class="<div class="grid h-8 w-8 place-items-center rounded-lg p-1.5 style="background:var(--primary)">
-              <!-- Radar flat icon -->
-              <svg viewBox="0 0 24 24" class="icon-flat" fill="#0E1218"><path d="M12 20a8 8 0 1 1 5.66-13.66l-1.41 1.41A6 6 0 1 0 18 12h2A8 8 0 0 1 12 20Zm-1-7V6h2v5l3 3-1.41 1.41L11 13Z"/></svg>
-            </div>
+            <div class="icon-box mx-auto mb-2"><iconify-icon icon="tabler:radar"></iconify-icon></div>
             <div class="text-xs">Detect</div>
           </div>
           <div class="card rounded-xl p-3 text-center">
-            <div class="<div class="grid h-8 w-8 place-items-center rounded-lg p-1.5 style="background:var(--primary)">
-              <!-- Restore flat icon -->
-              <svg viewBox="0 0 24 24" class="icon-flat" fill="#0E1218"><path d="M12 6V2l-5 5 5 5V8a6 6 0 1 1-6 6H4a8 8 0 1 0 8-8Z"/></svg>
-            </div>
+            <div class="icon-box mx-auto mb-2"><iconify-icon icon="mdi:history"></iconify-icon></div>
             <div class="text-xs">Recover</div>
           </div>
         </div>
@@ -103,29 +96,11 @@
       <!-- Hero card -->
       <div class="relative">
         <div class="card rounded-2xl p-6">
-          <h3 class="mb-2 text-lg font-semibold">What we deliver</h3>
+          <div class="kicker mb-2">What we deliver</div>
           <ul class="space-y-3 text-sm muted">
-            <li class="flex items-start gap-3">
-              <div class="grid h-6 w-6 place-items-center rounded-md" style="background:var(--accent)">
-                <!-- Key flat icon -->
-                <svg viewBox="0 0 24 24" class="icon-flat" fill="#0E1218"><path d="M14 3a5 5 0 1 0 3.9 8.1L21 14v3h-3v3h-3v-3h-2l-1-1 2-2-1-1A5 5 0 0 0 14 3Z"/></svg>
-              </div>
-              <span>Baseline hardening for identity, endpoints, email, and backups</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <div class="grid h-6 w-6 place-items-center rounded-md" style="background:var(--accent)">
-                <!-- Bug flat icon -->
-                <svg viewBox="0 0 24 24" class="icon-flat" fill="#0E1218"><path d="M7 6V3h2v3h6V3h2v3h2v2h-2v2h2v2h-2c0 3-2 6-6 6s-6-3-6-6H3v-2h2V8H3V6h2Zm3 6h4v2h-4v-2Z"/></svg>
-              </div>
-              <span>Vulnerability scanning and prioritization with clear remediation</span>
-            </li>
-            <li class="flex items-start gap-3">
-              <div class="grid h-6 w-6 place-items-center rounded-md" style="background:var(--accent)">
-                <!-- Lifebuoy flat icon -->
-                <svg viewBox="0 0 24 24" class="icon-flat" fill="#0E1218"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm3.5 3.3 3.2 3.2A7.9 7.9 0 0 1 18.7 15l-2.2-2.2A5 5 0 0 0 14 10l1.5-4.7ZM5.3 5.5 8.5 8.7A5 5 0 0 0 10 14l-4.7 1.5A8 8 0 0 1 5.3 5.5Zm1.8 12.9 3.2-3.2A5 5 0 0 0 14 14l1.5 4.7a8 8 0 0 1-8.4-.3ZM15.8 8.2 12.6 5a8 8 0 0 1 8.4.3l-3.2 3.2A5 5 0 0 0 15.8 8.2Z"/></svg>
-              </div>
-              <span>Incident readiness with simple playbooks and recovery guidance</span>
-            </li>
+            <li class="flex items-start gap-3"><span class="icon-box-sm grid place-items-center"><iconify-icon icon="mdi:key-variant"></iconify-icon></span> Baseline hardening for identity, endpoints, email, and backups</li>
+            <li class="flex items-start gap-3"><span class="icon-box-sm grid place-items-center"><iconify-icon icon="mdi:bug-check"></iconify-icon></span> Vulnerability scanning and prioritization with clear remediation</li>
+            <li class="flex items-start gap-3"><span class="icon-box-sm grid place-items-center"><iconify-icon icon="mdi:lifebuoy"></iconify-icon></span> Incident readiness with simple playbooks and recovery guidance</li>
           </ul>
         </div>
       </div>
@@ -136,32 +111,23 @@
   <section id="services" class="mx-auto max-w-7xl px-4 py-16">
     <h2 class="mb-10 text-2xl font-semibold md:text-3xl">Services</h2>
     <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
-      <div class="card rounded-2xl p-6">
+      <div class="card rounded-2xl p-6 flex flex-col">
         <div class="mb-3 flex items-center gap-3">
-          <div class="grid h-8 w-8 place-items-center rounded-lg p-1.5" style="background:var(--primary)">
-            <!-- Checklist icon -->
-            <svg viewBox="0 0 24 24" class="icon-flat" fill="#0E1218"><path d="M9 11 7 9 5.6 10.4 9 13.8 18.4 4.4 17 3l-8 8Z"/><path d="M4 20h16v2H4z"/></svg>
-          </div>
+          <div class="icon-box"><iconify-icon icon="mdi:check-decagram"></iconify-icon></div>
           <h3 class="text-lg font-semibold">Security Readiness</h3>
         </div>
         <p class="text-sm muted">Foundational controls to prevent common threats. Practical policies and day‑one protections.</p>
       </div>
-      <div class="card rounded-2xl p-6">
+      <div class="card rounded-2xl p-6 flex flex-col">
         <div class="mb-3 flex items-center gap-3">
-          <div class="grid h-8 w-8 place-items-center rounded-lg p-1.5" style="background:var(--primary)">
-            <!-- Scan icon -->
-            <svg viewBox="0 0 24 24" class="icon-flat" fill="#0E1218"><path d="M3 7h18v2H3V7Zm0 8h18v2H3v-2Zm2-5h14v4H5v-4Z"/></svg>
-          </div>
+          <div class="icon-box"><iconify-icon icon="mdi:security-search"></iconify-icon></div>
           <h3 class="text-lg font-semibold">Vulnerability Management</h3>
         </div>
         <p class="text-sm muted">Routine scans, prioritization, and remediation support. Visibility that drives action.</p>
       </div>
-      <div class="card rounded-2xl p-6">
+      <div class="card rounded-2xl p-6 flex flex-col">
         <div class="mb-3 flex items-center gap-3">
-          <div class="grid h-8 w-8 place-items-center rounded-lg p-1.5" style="background:var(--primary)">
-            <!-- Headset icon -->
-            <svg viewBox="0 0 24 24" class="icon-flat" fill="#0E1218"><path d="M12 3a9 9 0 0 0-9 9v5a3 3 0 0 0 3 3h2v-6H5v-2a7 7 0 1 1 14 0v2h-3v6h2a3 3 0 0 0 3-3v-5a9 9 0 0 0-9-9Z"/></svg>
-          </div>
+          <div class="icon-box"><iconify-icon icon="mdi:headset"></iconify-icon></div>
           <h3 class="text-lg font-semibold">Advisory & Support</h3>
         </div>
         <p class="text-sm muted">Guidance for security and IT operations, tailored to your environment and goals.</p>
@@ -176,34 +142,22 @@
       <p class="mb-10 muted">Choose what you need now; expand later. Everything is modular and outcome‑based.</p>
       <div class="grid grid-cols-1 gap-6 md:grid-cols-4">
         <div class="card rounded-2xl p-6">
-          <div class="mb-2 grid h-8 w-8 place-items-center rounded-lg p-1.5" style="background:var(--accent)">
-            <!-- User-shield icon -->
-            <svg viewBox="0 0 24 24" class="icon-flat" fill="#0E1218"><path d="M12 14a5 5 0 1 0-5-5 5 5 0 0 0 5 5Zm0 2c-4 0-8 2-8 6h16c0-4-4-6-8-6Z"/></svg>
-          </div>
+          <div class="mb-2 icon-box-sm grid place-items-center"><iconify-icon icon="mdi:account-key"></iconify-icon></div>
           <h3 class="mb-1 font-semibold">Identity & Access</h3>
           <p class="text-sm muted">MFA, conditional access, role hygiene.</p>
         </div>
         <div class="card rounded-2xl p-6">
-          <div class="mb-2 grid h-8 w-8 place-items-center rounded-lg p-1.5" style="background:var(--accent)">
-            <!-- Laptop-mail icon -->
-            <svg viewBox="0 0 24 24" class="icon-flat" fill="#0E1218"><path d="M3 5h18v10H3V5Zm2 2v6h14V7H5Zm-2 10h18v2H3z"/></svg>
-          </div>
+          <div class="mb-2 icon-box-sm grid place-items-center"><iconify-icon icon="mdi:laptop"></iconify-icon></div>
           <h3 class="mb-1 font-semibold">Endpoint & Email</h3>
           <p class="text-sm muted">EDR, patching, phishing defenses.</p>
         </div>
         <div class="card rounded-2xl p-6">
-          <div class="mb-2 grid h-8 w-8 place-items-center rounded-lg p-1.5" style="background:var(--accent)">
-            <!-- Cloud-restore icon -->
-            <svg viewBox="0 0 24 24" class="icon-flat" fill="#0E1218"><path d="M19 18H7a4 4 0 1 1 .7-7.95A5 5 0 0 1 17 7a4 4 0 0 1 2 7.5V18Zm-7-2 3-3-1.4-1.4L13 12.2V9h-2v3.2l-1.6-1.6L8 13l4 3Z"/></svg>
-          </div>
+          <div class="mb-2 icon-box-sm grid place-items-center"><iconify-icon icon="mdi:cloud-refresh"></iconify-icon></div>
           <h3 class="mb-1 font-semibold">Backup & Recovery</h3>
           <p class="text-sm muted">Immutable backups, restore drills.</p>
         </div>
         <div class="card rounded-2xl p-6">
-          <div class="mb-2 grid h-8 w-8 place-items-center rounded-lg p-1.5" style="background:var(--accent)">
-            <!-- Megaphone icon -->
-            <svg viewBox="0 0 24 24" class="icon-flat" fill="#0E1218"><path d="M3 10v4h3l7 4V6L6 10H3Zm7 6.3-3-1.7V11.4l3-1.7v6.6Z"/></svg>
-          </div>
+          <div class="mb-2 icon-box-sm grid place-items-center"><iconify-icon icon="mdi:bullhorn-outline"></iconify-icon></div>
           <h3 class="mb-1 font-semibold">Awareness & Training</h3>
           <p class="text-sm muted">Campaigns and just‑in‑time coaching.</p>
         </div>
@@ -211,38 +165,47 @@
     </div>
   </section>
 
-  <!-- Pricing (generic, no hard numbers) -->
+  <!-- Pricing (no hard numbers) -->
   <section id="pricing" class="mx-auto max-w-7xl px-4 py-16">
     <h2 class="mb-2 text-2xl font-semibold md:text-3xl">Pricing</h2>
     <p class="mb-10 muted">Transparent, scalable, and tailored. We price outcomes, not tool lists. Request a quote to match your scope.</p>
     <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
       <div class="card rounded-2xl p-6">
-        <div class="mb-1 text-sm uppercase tracking-wide text-white/70">Starter</div>
+        <div class="mb-1 flex items-center gap-2 text-sm uppercase tracking-wide text-white/80">
+          <iconify-icon icon="mdi:rocket-launch-outline"></iconify-icon>
+          Starter
+        </div>
         <div class="mb-4 text-3xl font-bold">Custom</div>
         <ul class="mb-6 space-y-2 text-sm muted">
-          <li>Baseline hardening</li>
-          <li>Core monitoring</li>
-          <li>Monthly check‑ins</li>
+          <li class="flex items-center gap-2"><iconify-icon class="text-[var(--accent)]" icon="mdi:check-circle-outline"></iconify-icon> Baseline hardening</li>
+          <li class="flex items-center gap-2"><iconify-icon class="text-[var(--accent)]" icon="mdi:check-circle-outline"></iconify-icon> Core monitoring</li>
+          <li class="flex items-center gap-2"><iconify-icon class="text-[var(--accent)]" icon="mdi:check-circle-outline"></iconify-icon> Monthly check‑ins</li>
         </ul>
         <a href="#contact" class="btn-primary inline-block w-full rounded-xl px-5 py-3 text-center font-semibold">Request quote</a>
       </div>
       <div class="rounded-2xl p-6 text-[color:var(--bg)]" style="background:var(--primary); border:1px solid transparent; box-shadow:0 24px 60px var(--ring)">
-        <div class="mb-1 text-sm uppercase tracking-wide">Standard</div>
+        <div class="mb-1 flex items-center gap-2 text-sm uppercase tracking-wide">
+          <iconify-icon icon="mdi:star-circle-outline"></iconify-icon>
+          Standard
+        </div>
         <div class="mb-4 text-3xl font-bold">Tailored</div>
         <ul class="mb-6 space-y-2 text-sm">
-          <li>Everything in Starter</li>
-          <li>Email security & training</li>
-          <li>Quarterly reviews</li>
+          <li class="flex items-center gap-2"><iconify-icon icon="mdi:check-circle-outline"></iconify-icon> Everything in Starter</li>
+          <li class="flex items-center gap-2"><iconify-icon icon="mdi:check-circle-outline"></iconify-icon> Email security & training</li>
+          <li class="flex items-center gap-2"><iconify-icon icon="mdi:check-circle-outline"></iconify-icon> Quarterly reviews</li>
         </ul>
         <a href="#contact" class="inline-block w-full rounded-xl bg-white px-5 py-3 text-center font-semibold">Request quote</a>
       </div>
       <div class="card rounded-2xl p-6">
-        <div class="mb-1 text-sm uppercase tracking-wide text-white/70">Advanced</div>
+        <div class="mb-1 flex items-center gap-2 text-sm uppercase tracking-wide text-white/80">
+          <iconify-icon icon="mdi:crown-outline"></iconify-icon>
+          Advanced
+        </div>
         <div class="mb-4 text-3xl font-bold">Scope‑based</div>
         <ul class="mb-6 space-y-2 text-sm muted">
-          <li>Backup & recovery drills</li>
-          <li>Vendor & policy support</li>
-          <li>Executive reporting</li>
+          <li class="flex items-center gap-2"><iconify-icon class="text-[var(--accent)]" icon="mdi:check-circle-outline"></iconify-icon> Backup & recovery drills</li>
+          <li class="flex items-center gap-2"><iconify-icon class="text-[var(--accent)]" icon="mdi:check-circle-outline"></iconify-icon> Vendor & policy support</li>
+          <li class="flex items-center gap-2"><iconify-icon class="text-[var(--accent)]" icon="mdi:check-circle-outline"></iconify-icon> Executive reporting</li>
         </ul>
         <a href="#contact" class="btn-primary inline-block w-full rounded-xl px-5 py-3 text-center font-semibold">Request quote</a>
       </div>
@@ -256,40 +219,40 @@
         <div>
           <h2 class="mb-3 text-2xl font-semibold md:text-3xl">Free checklist: Security essentials</h2>
           <p class="mb-6 muted">A practical, vendor‑neutral list of controls you can start this week. No signup required.</p>
-          <a href="#" class="btn-primary inline-block rounded-xl px-5 py-3 font-semibold">Download PDF</a>
+          <a href="#" class="btn-primary inline-flex items-center gap-2 rounded-xl px-5 py-3 font-semibold"><iconify-icon icon="mdi:file-download-outline"></iconify-icon> Download PDF</a>
         </div>
         <div class="card rounded-2xl p-6 muted">
           <p class="mb-2 font-mono text-xs uppercase tracking-wide" style="color:var(--muted)">Preview</p>
           <ul class="space-y-2 text-sm">
-            <li>• MFA & access hygiene</li>
-            <li>• Patch & update rings</li>
-            <li>• Backup scope & tests</li>
-            <li>• Email authentication basics</li>
-            <li>• Asset & admin inventory</li>
+            <li class="flex items-center gap-2"><iconify-icon icon="mdi:shield-lock-outline"></iconify-icon> MFA & access hygiene</li>
+            <li class="flex items-center gap-2"><iconify-icon icon="mdi:update"></iconify-icon> Patch & update rings</li>
+            <li class="flex items-center gap-2"><iconify-icon icon="mdi:cloud-lock-outline"></iconify-icon> Backup scope & tests</li>
+            <li class="flex items-center gap-2"><iconify-icon icon="mdi:email-check-outline"></iconify-icon> Email authentication basics</li>
+            <li class="flex items-center gap-2"><iconify-icon icon="mdi:list-status"></iconify-icon> Asset & admin inventory</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- FAQ (neutral) -->
+  <!-- FAQ -->
   <section class="mx-auto max-w-7xl px-4 py-16">
     <h2 class="mb-6 text-2xl font-semibold md:text-3xl">FAQ</h2>
     <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
       <div class="card rounded-2xl p-6">
-        <h3 class="mb-2 font-semibold">Do you support small teams?</h3>
+        <h3 class="mb-2 font-semibold flex items-center gap-2"><iconify-icon icon="mdi:account-group-outline"></iconify-icon> Do you support small teams?</h3>
         <p class="text-sm muted">Yes. Our engagements scale from small teams to growing organizations, with scope matched to your goals.</p>
       </div>
       <div class="card rounded-2xl p-6">
-        <h3 class="mb-2 font-semibold">Can we start with an assessment?</h3>
+        <h3 class="mb-2 font-semibold flex items-center gap-2"><iconify-icon icon="mdi:clipboard-text-search-outline"></iconify-icon> Can we start with an assessment?</h3>
         <p class="text-sm muted">Absolutely. We often begin with a light assessment to define priorities and a realistic roadmap.</p>
       </div>
       <div class="card rounded-2xl p-6">
-        <h3 class="mb-2 font-semibold">Which tools do you use?</h3>
+        <h3 class="mb-2 font-semibold flex items-center gap-2"><iconify-icon icon="mdi:cog-outline"></iconify-icon> Which tools do you use?</h3>
         <p class="text-sm muted">We’re vendor‑agnostic and design to your environment. Our focus is outcomes, not tool lists.</p>
       </div>
       <div class="card rounded-2xl p-6">
-        <h3 class="mb-2 font-semibold">How do we get a quote?</h3>
+        <h3 class="mb-2 font-semibold flex items-center gap-2"><iconify-icon icon="mdi:currency-usd"></iconify-icon> How do we get a quote?</h3>
         <p class="text-sm muted">Share your scope in the form below. We’ll propose an approach and transparent pricing.</p>
       </div>
     </div>
@@ -313,11 +276,11 @@
       </form>
 
       <div class="space-y-4 text-sm muted">
-        <div><strong>Email:</strong> <a href="mailto:SUPPORT_EMAIL" class="text-[color:var(--accent)]">SUPPORT_EMAIL</a></div>
-        <div><strong>Website:</strong> <a href="WEBSITE_URL" class="text-[color:var(--accent)]" target="_blank" rel="noreferrer">WEBSITE_URL</a></div>
-        <div><strong>LinkedIn:</strong> <a href="LINKEDIN_URL" class="text-[color:var(--accent)]" target="_blank" rel="noreferrer">LINKEDIN_URL</a></div>
+        <div class="flex items-center gap-2"><iconify-icon icon="mdi:email-outline"></iconify-icon> <strong>Email:</strong> <a href="mailto:hello@signal72.com" class="text-[color:var(--accent)]">hello@signal72.com</a></div>
+        <div class="flex items-center gap-2"><iconify-icon icon="mdi:web"></iconify-icon> <strong>Website:</strong> <a href="https://signal72.com/" class="text-[color:var(--accent)]" target="_blank" rel="noreferrer">signal72.com</a></div>
+        <div class="flex items-center gap-2"><iconify-icon icon="mdi:linkedin"></iconify-icon> <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/company/signal72" class="text-[color:var(--accent)]" target="_blank" rel="noreferrer">linkedin.com/company/signal72</a></div>
         <div class="card rounded-2xl p-6">
-          <h3 class="mb-2 font-semibold">How we engage</h3>
+          <h3 class="mb-2 font-semibold flex items-center gap-2"><iconify-icon icon="mdi:handshake-outline"></iconify-icon> How we engage</h3>
           <ol class="list-inside list-decimal space-y-2 text-sm">
             <li>Intro call to align on goals</li>
             <li>Light assessment to prioritize</li>
@@ -332,12 +295,12 @@
   <footer class="border-t border-white/10 py-10">
     <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 md:flex-row">
       <div class="flex items-center gap-3">
-        <div class="grid h-9 w-9 place-items-center rounded-lg" style="background:var(--primary);">LOGO</div>
-        <div class="text-sm muted">© <span id="year"></span> BRAND_NAME. All rights reserved.</div>
+        <div class="grid h-9 w-9 place-items-center rounded-lg" style="background:var(--primary);">S72</div>
+        <div class="text-sm muted">© <span id="year"></span> Signal 72. All rights reserved.</div>
       </div>
       <div class="flex flex-wrap items-center gap-6 text-sm muted">
-        <a href="#" class="hover:text-white">Privacy</a>
-        <a href="#" class="hover:text-white">Terms</a>
+        <a href="#resources" class="hover:text-white">Resources</a>
+        <a href="#pricing" class="hover:text-white">Pricing</a>
         <a href="#contact" class="hover:text-white">Contact</a>
       </div>
     </div>
@@ -345,10 +308,10 @@
 
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
-    document.getElementById('contact-form').addEventListener('submit', function (e) {
+    document.getElementById('contact-form')?.addEventListener('submit', function (e) {
       e.preventDefault();
       const data = Object.fromEntries(new FormData(e.target).entries());
-      console.log('Pseudo contact form:', data);
+      console.log('Signal 72 contact form:', data);
       alert('Thanks — we\'ll follow up shortly.');
       e.target.reset();
     });

@@ -1,17 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <!--
-    PSEUDO-WEBSITE (NON-IDENTIFYING)
-    ------------------------------------------------------------------
-    Replace tokens to rebrand quickly (optional):
-      BRAND_NAME      → e.g., "Your Company" (appears in nav + hero)
-      BRAND_TAGLINE   → short promise, e.g., "Secure. Resilient. Ready."
-      SUPPORT_EMAIL   → e.g., "hello@example.com"
-      WEBSITE_URL     → e.g., "https://example.com"
-      LINKEDIN_URL    → e.g., "https://www.linkedin.com/company/example"
-    This file intentionally avoids locations, specific claims, and stats.
-  -->
+  <!-- PSEUDO-WEBSITE (NON-IDENTIFYING) with flat icons and orange palette -->
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>BRAND_NAME — Cybersecurity & IT Services</title>
@@ -22,21 +12,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* Brand tokens (neutral defaults) */
+    /* Orange-forward palette (not burnt, not pastel) */
     :root {
-      --primary: #1D3FFF;     /* indigo */
-      --accent:  #8EEA3E;     /* lime */
-      --bg:      #0E1218;     /* graphite */
-      --muted:   #7A8898;     /* slate */
+      --primary: #FF7A1A;   /* vivid orange */
+      --primary-600: #E96E16; /* darker hover */
+      --accent:  #1EC5A0;   /* cool teal accent for contrast */
+      --bg:      #0E1218;   /* graphite */
+      --muted:   #8A95A6;   /* slate */
       --card:    rgba(255,255,255,0.05);
+      --ring:    rgba(255, 122, 26, .35);
     }
     body { font-family: 'IBM Plex Sans', 'Inter', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial; background: var(--bg); color: #fff; }
     h1,h2,h3 { font-family: 'Inter','IBM Plex Sans', system-ui, -apple-system, Segoe UI, Roboto; }
-    .btn-primary { background: var(--primary); color: #fff; box-shadow: 0 10px 30px rgba(29,63,255,.35); }
-    .btn-primary:hover { opacity: .95; }
+    .btn-primary { background: var(--primary); color: #0E1218; box-shadow: 0 10px 30px var(--ring); }
+    .btn-primary:hover { background: var(--primary-600); }
     .btn-ghost { border: 1px solid rgba(255,255,255,.1); }
     .card { background: var(--card); border: 1px solid rgba(255,255,255,.1); }
     .muted { color: var(--muted); }
+    .badge { background: rgba(255, 122, 26, .12); color: #FFC9A1; border: 1px solid rgba(255, 122, 26, .25); }
+    .icon-flat { width: 22px; height: 22px; display: inline-block; }
   </style>
 </head>
 <body class="min-h-screen w-full selection:bg-white/10">
@@ -45,7 +39,7 @@
   <header class="sticky top-0 z-30 backdrop-blur bg-[color:var(--bg)]/70">
     <div class="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
       <a href="#" class="flex items-center gap-3">
-        <div class="grid place-items-center h-10 w-10 rounded-xl" style="background:var(--primary); box-shadow:0 8px 24px rgba(29,63,255,.35);">LOGO</div>
+        <div class="grid place-items-center h-10 w-10 rounded-xl" style="background:var(--primary); box-shadow:0 8px 24px var(--ring);">LOGO</div>
         <div class="leading-tight">
           <div class="text-lg font-semibold tracking-wide">BRAND_NAME</div>
           <div class="text-xs muted">Cybersecurity & IT</div>
@@ -71,22 +65,67 @@
       <div class="absolute -left-24 -top-40 h-[32rem] w-[32rem] rounded-full blur-3xl" style="background: radial-gradient(closest-side, var(--primary), transparent);"></div>
       <div class="absolute -right-24 -bottom-40 h-[28rem] w-[28rem] rounded-full blur-3xl" style="background: radial-gradient(closest-side, var(--accent), transparent);"></div>
     </div>
-    <div class="mx-auto grid max-w-7xl grid-cols-1 items-center gap-8 px-4 py-20 md:grid-cols-2">
+    <div class="mx-auto grid max-w-7xl grid-cols-1 items-center gap-10 px-4 py-20 md:grid-cols-2">
       <div class="space-y-6">
+        <span class="badge inline-block rounded-full px-3 py-1 text-xs font-semibold">New</span>
         <h1 class="text-3xl font-bold leading-tight md:text-5xl">BRAND_TAGLINE</h1>
         <p class="max-w-xl muted">We help teams reduce risk, strengthen defenses, and build operational resilience. Clear scope. Practical controls. No hype.</p>
         <div class="flex flex-wrap gap-3">
           <a href="#contact" class="btn-primary rounded-xl px-5 py-3 font-semibold">Request a consultation</a>
           <a href="#resources" class="btn-ghost rounded-xl px-5 py-3 font-semibold">Download checklist</a>
         </div>
+        <!-- Icon strip -->
+        <div class="mt-6 grid grid-cols-3 gap-4 md:max-w-md">
+          <div class="card rounded-xl p-3 text-center">
+            <div class="mx-auto mb-2 h-8 w-8 rounded-lg" style="background:var(--primary)">
+              <!-- Shield flat icon -->
+              <svg viewBox="0 0 24 24" class="icon-flat" fill="#0E1218"><path d="M12 2 4 5v6c0 5 4 9 8 11 4-2 8-6 8-11V5l-8-3Z"/></svg>
+            </div>
+            <div class="text-xs">Protect</div>
+          </div>
+          <div class="card rounded-xl p-3 text-center">
+            <div class="mx-auto mb-2 h-8 w-8 rounded-lg" style="background:var(--primary)">
+              <!-- Radar flat icon -->
+              <svg viewBox="0 0 24 24" class="icon-flat" fill="#0E1218"><path d="M12 20a8 8 0 1 1 5.66-13.66l-1.41 1.41A6 6 0 1 0 18 12h2A8 8 0 0 1 12 20Zm-1-7V6h2v5l3 3-1.41 1.41L11 13Z"/></svg>
+            </div>
+            <div class="text-xs">Detect</div>
+          </div>
+          <div class="card rounded-xl p-3 text-center">
+            <div class="mx-auto mb-2 h-8 w-8 rounded-lg" style="background:var(--primary)">
+              <!-- Restore flat icon -->
+              <svg viewBox="0 0 24 24" class="icon-flat" fill="#0E1218"><path d="M12 6V2l-5 5 5 5V8a6 6 0 1 1-6 6H4a8 8 0 1 0 8-8Z"/></svg>
+            </div>
+            <div class="text-xs">Recover</div>
+          </div>
+        </div>
       </div>
+
+      <!-- Hero card -->
       <div class="relative">
         <div class="card rounded-2xl p-6">
           <h3 class="mb-2 text-lg font-semibold">What we deliver</h3>
-          <ul class="space-y-2 text-sm muted">
-            <li class="flex items-start gap-2"><span class="mt-1 inline-block h-1.5 w-1.5 flex-none rounded-full" style="background:var(--primary)"></span> Baseline hardening for identity, endpoints, email, and backups</li>
-            <li class="flex items-start gap-2"><span class="mt-1 inline-block h-1.5 w-1.5 flex-none rounded-full" style="background:var(--primary)"></span> Vulnerability scanning and prioritization with clear remediation</li>
-            <li class="flex items-start gap-2"><span class="mt-1 inline-block h-1.5 w-1.5 flex-none rounded-full" style="background:var(--primary)"></span> Incident readiness with simple playbooks and recovery guidance</li>
+          <ul class="space-y-3 text-sm muted">
+            <li class="flex items-start gap-3">
+              <div class="mt-0.5 h-6 w-6 rounded-md" style="background:var(--accent)">
+                <!-- Key flat icon -->
+                <svg viewBox="0 0 24 24" class="icon-flat" fill="#0E1218"><path d="M14 3a5 5 0 1 0 3.9 8.1L21 14v3h-3v3h-3v-3h-2l-1-1 2-2-1-1A5 5 0 0 0 14 3Z"/></svg>
+              </div>
+              <span>Baseline hardening for identity, endpoints, email, and backups</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="mt-0.5 h-6 w-6 rounded-md" style="background:var(--accent)">
+                <!-- Bug flat icon -->
+                <svg viewBox="0 0 24 24" class="icon-flat" fill="#0E1218"><path d="M7 6V3h2v3h6V3h2v3h2v2h-2v2h2v2h-2c0 3-2 6-6 6s-6-3-6-6H3v-2h2V8H3V6h2Zm3 6h4v2h-4v-2Z"/></svg>
+              </div>
+              <span>Vulnerability scanning and prioritization with clear remediation</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <div class="mt-0.5 h-6 w-6 rounded-md" style="background:var(--accent)">
+                <!-- Lifebuoy flat icon -->
+                <svg viewBox="0 0 24 24" class="icon-flat" fill="#0E1218"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm3.5 3.3 3.2 3.2A7.9 7.9 0 0 1 18.7 15l-2.2-2.2A5 5 0 0 0 14 10l1.5-4.7ZM5.3 5.5 8.5 8.7A5 5 0 0 0 10 14l-4.7 1.5A8 8 0 0 1 5.3 5.5Zm1.8 12.9 3.2-3.2A5 5 0 0 0 14 14l1.5 4.7a8 8 0 0 1-8.4-.3ZM15.8 8.2 12.6 5a8 8 0 0 1 8.4.3l-3.2 3.2A5 5 0 0 0 15.8 8.2Z"/></svg>
+              </div>
+              <span>Incident readiness with simple playbooks and recovery guidance</span>
+            </li>
           </ul>
         </div>
       </div>
@@ -98,15 +137,33 @@
     <h2 class="mb-10 text-2xl font-semibold md:text-3xl">Services</h2>
     <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
       <div class="card rounded-2xl p-6">
-        <h3 class="mb-3 text-lg font-semibold">Security Readiness</h3>
+        <div class="mb-3 flex items-center gap-3">
+          <div class="h-8 w-8 rounded-lg" style="background:var(--primary)">
+            <!-- Checklist icon -->
+            <svg viewBox="0 0 24 24" class="icon-flat" fill="#0E1218"><path d="M9 11 7 9 5.6 10.4 9 13.8 18.4 4.4 17 3l-8 8Z"/><path d="M4 20h16v2H4z"/></svg>
+          </div>
+          <h3 class="text-lg font-semibold">Security Readiness</h3>
+        </div>
         <p class="text-sm muted">Foundational controls to prevent common threats. Practical policies and day‑one protections.</p>
       </div>
       <div class="card rounded-2xl p-6">
-        <h3 class="mb-3 text-lg font-semibold">Vulnerability Management</h3>
+        <div class="mb-3 flex items-center gap-3">
+          <div class="h-8 w-8 rounded-lg" style="background:var(--primary)">
+            <!-- Scan icon -->
+            <svg viewBox="0 0 24 24" class="icon-flat" fill="#0E1218"><path d="M3 7h18v2H3V7Zm0 8h18v2H3v-2Zm2-5h14v4H5v-4Z"/></svg>
+          </div>
+          <h3 class="text-lg font-semibold">Vulnerability Management</h3>
+        </div>
         <p class="text-sm muted">Routine scans, prioritization, and remediation support. Visibility that drives action.</p>
       </div>
       <div class="card rounded-2xl p-6">
-        <h3 class="mb-3 text-lg font-semibold">Advisory & Support</h3>
+        <div class="mb-3 flex items-center gap-3">
+          <div class="h-8 w-8 rounded-lg" style="background:var(--primary)">
+            <!-- Headset icon -->
+            <svg viewBox="0 0 24 24" class="icon-flat" fill="#0E1218"><path d="M12 3a9 9 0 0 0-9 9v5a3 3 0 0 0 3 3h2v-6H5v-2a7 7 0 1 1 14 0v2h-3v6h2a3 3 0 0 0 3-3v-5a9 9 0 0 0-9-9Z"/></svg>
+          </div>
+          <h3 class="text-lg font-semibold">Advisory & Support</h3>
+        </div>
         <p class="text-sm muted">Guidance for security and IT operations, tailored to your environment and goals.</p>
       </div>
     </div>
@@ -118,10 +175,38 @@
       <h2 class="mb-2 text-2xl font-semibold md:text-3xl">Solution areas</h2>
       <p class="mb-10 muted">Choose what you need now; expand later. Everything is modular and outcome‑based.</p>
       <div class="grid grid-cols-1 gap-6 md:grid-cols-4">
-        <div class="card rounded-2xl p-6"><h3 class="mb-2 font-semibold">Identity & Access</h3><p class="text-sm muted">MFA, conditional access, role hygiene.</p></div>
-        <div class="card rounded-2xl p-6"><h3 class="mb-2 font-semibold">Endpoint & Email</h3><p class="text-sm muted">EDR, patching, phishing defenses.</p></div>
-        <div class="card rounded-2xl p-6"><h3 class="mb-2 font-semibold">Backup & Recovery</h3><p class="text-sm muted">Immutable backups, restore drills.</p></div>
-        <div class="card rounded-2xl p-6"><h3 class="mb-2 font-semibold">Awareness & Training</h3><p class="text-sm muted">Campaigns and just‑in‑time coaching.</p></div>
+        <div class="card rounded-2xl p-6">
+          <div class="mb-2 h-8 w-8 rounded-lg" style="background:var(--accent)">
+            <!-- User-shield icon -->
+            <svg viewBox="0 0 24 24" class="icon-flat" fill="#0E1218"><path d="M12 14a5 5 0 1 0-5-5 5 5 0 0 0 5 5Zm0 2c-4 0-8 2-8 6h16c0-4-4-6-8-6Z"/></svg>
+          </div>
+          <h3 class="mb-1 font-semibold">Identity & Access</h3>
+          <p class="text-sm muted">MFA, conditional access, role hygiene.</p>
+        </div>
+        <div class="card rounded-2xl p-6">
+          <div class="mb-2 h-8 w-8 rounded-lg" style="background:var(--accent)">
+            <!-- Laptop-mail icon -->
+            <svg viewBox="0 0 24 24" class="icon-flat" fill="#0E1218"><path d="M3 5h18v10H3V5Zm2 2v6h14V7H5Zm-2 10h18v2H3z"/></svg>
+          </div>
+          <h3 class="mb-1 font-semibold">Endpoint & Email</h3>
+          <p class="text-sm muted">EDR, patching, phishing defenses.</p>
+        </div>
+        <div class="card rounded-2xl p-6">
+          <div class="mb-2 h-8 w-8 rounded-lg" style="background:var(--accent)">
+            <!-- Cloud-restore icon -->
+            <svg viewBox="0 0 24 24" class="icon-flat" fill="#0E1218"><path d="M19 18H7a4 4 0 1 1 .7-7.95A5 5 0 0 1 17 7a4 4 0 0 1 2 7.5V18Zm-7-2 3-3-1.4-1.4L13 12.2V9h-2v3.2l-1.6-1.6L8 13l4 3Z"/></svg>
+          </div>
+          <h3 class="mb-1 font-semibold">Backup & Recovery</h3>
+          <p class="text-sm muted">Immutable backups, restore drills.</p>
+        </div>
+        <div class="card rounded-2xl p-6">
+          <div class="mb-2 h-8 w-8 rounded-lg" style="background:var(--accent)">
+            <!-- Megaphone icon -->
+            <svg viewBox="0 0 24 24" class="icon-flat" fill="#0E1218"><path d="M3 10v4h3l7 4V6L6 10H3Zm7 6.3-3-1.7V11.4l3-1.7v6.6Z"/></svg>
+          </div>
+          <h3 class="mb-1 font-semibold">Awareness & Training</h3>
+          <p class="text-sm muted">Campaigns and just‑in‑time coaching.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -141,15 +226,15 @@
         </ul>
         <a href="#contact" class="btn-primary inline-block w-full rounded-xl px-5 py-3 text-center font-semibold">Request quote</a>
       </div>
-      <div class="rounded-2xl p-6 text-white" style="background:var(--primary); border:1px solid transparent; box-shadow:0 24px 60px rgba(29,63,255,.35)">
-        <div class="mb-1 text-sm uppercase tracking-wide text-white/90">Standard</div>
+      <div class="rounded-2xl p-6 text-[color:var(--bg)]" style="background:var(--primary); border:1px solid transparent; box-shadow:0 24px 60px var(--ring)">
+        <div class="mb-1 text-sm uppercase tracking-wide">Standard</div>
         <div class="mb-4 text-3xl font-bold">Tailored</div>
         <ul class="mb-6 space-y-2 text-sm">
           <li>Everything in Starter</li>
           <li>Email security & training</li>
           <li>Quarterly reviews</li>
         </ul>
-        <a href="#contact" class="inline-block w-full rounded-xl bg-white px-5 py-3 text-center font-semibold text-[color:var(--bg)]">Request quote</a>
+        <a href="#contact" class="inline-block w-full rounded-xl bg-white px-5 py-3 text-center font-semibold">Request quote</a>
       </div>
       <div class="card rounded-2xl p-6">
         <div class="mb-1 text-sm uppercase tracking-wide text-white/70">Advanced</div>
